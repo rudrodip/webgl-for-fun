@@ -5,15 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webgl - shader</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #0e0e0e;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
         canvas {
-            border: 1px solid black;
+            height: 600px;
+            width: 600px;
+            background-color: coral;
+            border-spacing: 2rem;
+        }
+
+        #error-message {
+            font-size: large;
+            color: rgb(255, 255, 255);
+            margin-top: 20px;
+            padding: 10px 10px 10px 0px;
+            border: gray;
+            border-radius: 5px;
+            background-color: #4d4d4d;
+            color: aliceblue;
+            width: 100%;
+            max-width: 600px;
+            display: none;
+            color: tomato;
         }
     </style>
 </head>
 <body onload="InitDemo();">
-    <canvas id="game-surface" width="800" height="600">
-        Your browser does not support HTML5
-    </canvas>
+    <canvas id="canvas" width="600px" height="600px"></canvas>
+    <p id="error-message">No error</p>
     <script src="script.js"></script>
 </body>
 </html>
